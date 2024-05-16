@@ -1,4 +1,4 @@
-package juli.misEstructuras;
+package juli.vitalco.misEstructuras;
 
 public abstract class ListaDobleEnlazadaAbstracta<T> implements Lista<T> {
     private Nodo<T> cabeza;
@@ -148,9 +148,7 @@ public abstract class ListaDobleEnlazadaAbstracta<T> implements Lista<T> {
             }
         }
         return null;
-    }  
-    
-    
+    }
      
     //Encuentra la primera ocurrencia de un valor y devuelve su posición o un indicador de no encontrado.
     @Override
@@ -190,9 +188,79 @@ public abstract class ListaDobleEnlazadaAbstracta<T> implements Lista<T> {
         }
         return actual.getValor(); // Retornar el valor del nodo actual después de iterar hasta el índice deseado
     }
+
+    public T[] toArray() {
+        T[] arreglo = (T[]) new Object[tamano];
+        Nodo<T> actual = cabeza;
+        for (int i = 0; i < tamano; i++) {
+            arreglo[i] = actual.getValor();
+            actual = actual.getSiguiente();
+        }
+        return arreglo;
+    }
+
+    public T buscarObjeto(T valor) {
+        Nodo<T> actual = cabeza;
+        while (actual != null) {
+            if (actual.getValor().equals(valor)) {
+                return actual.getValor();
+            }
+            actual = actual.getSiguiente();
+        }
+        return null;
+    }
+
+    //get cabeza
+    public Nodo<T> getCabeza() {
+        return cabeza;
+    }
+
+    //Eliminar un elemento
+    public void eliminarElemento(T valor) {
+        Nodo<T> actual = cabeza;
+        while (actual != null) {
+            if (actual.getValor().equals(valor)) {
+                if (actual == cabeza) {
+                    cabeza = actual.getSiguiente();
+                    if (cabeza != null) {
+                        cabeza.setAnterior(null);
+                    }
+                } else if (actual == cola) {
+                    cola = actual.getAnterior();
+                    if (cola != null) {
+                        cola.setSiguiente(null);
+                    }
+                } else {
+                    actual.getAnterior().setSiguiente(actual.getSiguiente());
+                    actual.getSiguiente().setAnterior(actual.getAnterior());
+                }
+                tamano--;
+                return;
+            }
+            actual = actual.getSiguiente();
+        }
+    }
+
+    //metodo para imprimir toda la lista
+    public void imprimirLista(){
+        Nodo<T> actual = cabeza;
+        while(actual != null){
+            System.out.println(actual.getValor());
+            actual = actual.siguiente;
+        }
+    }
+
+    //metodo para añadir una lista a otra lista
+    public void agregarLista(ListaDobleEnlazada<T> lista){
+        Nodo<T> actual = lista.getCabeza();
+        while(actual != null){
+            agregarAlFinal(actual.getValor());
+            actual = actual.siguiente;
+        }
+    }
    
     // Clase interna Nodo
-    private static class Nodo<T> {
+    public static class Nodo<T> {
         T valor;
         Nodo<T> siguiente;
         Nodo<T> anterior;

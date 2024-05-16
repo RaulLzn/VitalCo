@@ -5,21 +5,25 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import juli.vitalco.controller.InicioViewController;
 
 import java.io.IOException;
 
-public class AdminApp extends Application {
+public class VITALCOAPP extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
         // Cargar la vista FXML
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("AdminView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("InicioView.fxml"));
         Parent root = loader.load();
+
+        // Obtener el controlador
+        InicioViewController controller = loader.getController();
 
         // Configurar la escena
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Menú Administrador");
+        primaryStage.setTitle("Inicio Vitalco");
         primaryStage.show();
     }
 

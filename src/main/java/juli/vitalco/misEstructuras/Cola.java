@@ -1,4 +1,4 @@
-package juli.misEstructuras;
+package juli.vitalco.misEstructuras;
 
 public class Cola<T> {
 	private Nodo<T> siguiente;
@@ -47,11 +47,42 @@ public class Cola<T> {
     public boolean estaVacia() {
         return siguiente == null;
     }
+
+    //vaciar la cola
+    public void vaciar() {
+        siguiente = null;
+        ultimo = null;
+    }
+
+
+    public Object[] toArray() {
+        Object[] array = new Object[tamano()];
+        Nodo<T> temp = ultimo;
+        for (int i = 0; i < array.length; i++) {
+            array[i] = temp.getElemento();
+            temp = temp.getSiguiente();
+        }
+        return array;
+    }
+
+    public int tamano() {
+        int size = 0;
+        Nodo<T> temp = siguiente;
+        while (temp != null) {
+            size++;
+            temp = temp.siguiente;
+        }
+        return size;
+    }
     
     private static class Nodo<T> {
         T valor;
         Nodo<T> siguiente;
         Nodo<T> anterior;
+
+        public T getElemento() {
+            return valor;
+        }
         
         public Nodo(T valor){
             this(valor, null, null);

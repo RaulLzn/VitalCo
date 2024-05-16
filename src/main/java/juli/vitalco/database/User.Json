@@ -1,0 +1,27 @@
+[
+  {
+    "idUser": "1",
+    "password": "contraseña1",
+    "logged": true
+  },
+  {
+    "idUser": "Admin",
+    "password": "admin",
+    "logged": false
+  },
+  {
+    "idUser": "1097491234",
+    "password": "contraaseñaprb",
+    "logged": false
+  },
+  {
+    "idUser": ".",
+    "password": ".",
+    "logged": false
+  },
+  {
+    "idUser": ".",
+    "password": ".",
+    "logged": false
+  }
+]

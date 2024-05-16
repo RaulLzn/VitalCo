@@ -13,11 +13,11 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juli.vitalco.view.LoginView">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juli.vitalco.controller.LoginViewController">
    <children>
       <ImageView fitHeight="152.0" fitWidth="139.0" layoutX="571.0" layoutY="127.0">
          <image>
-            <Image url="@../img/pngtree-medical-volunteer-icon-add-user-profile-avatar-vector-png-image_19974700.png" />
+            <Image url="@img/pngtree-medical-volunteer-icon-add-user-profile-avatar-vector-png-image_19974700.png" />
          </image>
       </ImageView>
       <GridPane layoutX="481.0" layoutY="392.0" prefHeight="84.0" prefWidth="319.0">
@@ -40,8 +40,9 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField GridPane.columnIndex="1" />
-            <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+             <TextField fx:id="usernameField" GridPane.columnIndex="1" />
+             <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
          </children>
       </GridPane>
       <AnchorPane layoutY="-2.0" prefHeight="63.0" prefWidth="1280.0" style="-fx-background-color: #f3549e;">
@@ -52,7 +53,7 @@
                </font>
             </Label>
          </children></AnchorPane>
-      <Button layoutX="584.0" layoutY="552.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="113.0" text="Ingresar">
+      <Button fx:id="loginButton" layoutX="584.0" layoutY="552.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="113.0" style="-fx-background-color: #07A5CCFF;" text="Ingresar">
          <cursor>
             <Cursor fx:constant="OPEN_HAND" />
          </cursor>

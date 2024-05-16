@@ -2,9 +2,9 @@ package juli.vitalco.model.crud.shared;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import oasis.estructurasDatos.listas.DoubleLinkedList;
-import oasis.estructurasDatos.listas.QueueList;
-import oasis.estructurasDatos.listas.StackList;
+import juli.vitalco.misEstructuras.Cola;
+import juli.vitalco.misEstructuras.ListaDobleEnlazada;
+import juli.vitalco.misEstructuras.Pila;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -15,18 +15,32 @@ import java.util.logging.Logger;
 
 public class FileJsonAdapter<E> {
     private Object fileWriterLock;
+    private static FileJsonAdapter instance;
 
-    private FileJsonAdapter() {
+    private final Gson gson;
 
+
+    private FileJsonAdapter(Gson gson) {
+        this.gson = gson;
         this.fileWriterLock = new Object();
     }
 
-    public static synchronized <E> FileJsonAdapter<E> getInstance() {
-        return new FileJsonAdapter<>();
+    public static <T> FileJsonAdapter<T> getInstance(Gson gson) {
+        if (instance == null) {
+            instance = new FileJsonAdapter<>(gson);
+        }
+        return instance;
     }
 
-    public DoubleLinkedList<E> getObjects(String pathFile, Class<E[]> classOfT) {
-        DoubleLinkedList<E> objList = new DoubleLinkedList<>();
+    public Gson getGsonWithCustomAdapters() {
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        gsonBuilder.registerTypeAdapter(ThreadLocal.class, new ThreadLocalAdapter<>());
+        return gsonBuilder.create();
+    }
+
+
+    public ListaDobleEnlazada<E> getObjects(String pathFile, Class<E[]> classOfT) {
+        ListaDobleEnlazada<E> objList = new ListaDobleEnlazada<>();
         try {
             Gson gson = new GsonBuilder().create();
             BufferedReader bufferedReader = new BufferedReader(new FileReader(pathFile));
@@ -42,7 +56,7 @@ public class FileJsonAdapter<E> {
         return objList;
     }
 
-    public Boolean writeObjects(String pathFile, DoubleLinkedList<E> objects) {
+    public Boolean writeObjects(String pathFile, ListaDobleEnlazada<E> objects) {
         boolean successful = false;
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
@@ -63,15 +77,15 @@ public class FileJsonAdapter<E> {
     }
 
 
-    public StackList<E> getObjectsStack(String pathFile, Class<E[]> classOfT) {
-        StackList<E> objStack = new StackList<>();
+    public Pila<E> getObjectsStack(String pathFile, Class<E[]> classOfT) {
+        Pila<E> objStack = new Pila<>();
         try {
             Gson gson = new GsonBuilder().create();
             BufferedReader bufferedReader = new BufferedReader(new FileReader(pathFile));
             E[] objArray = gson.fromJson(bufferedReader, classOfT);
             if (objArray != null) {
                 for (E obj : objArray) {
-                    objStack.push(obj); // Agregar objetos al StackList
+                    objStack.push(obj); // Agregar objetos al Pila
                 }
             }
         } catch (IOException e) {
@@ -79,7 +93,8 @@ public class FileJsonAdapter<E> {
         }
         return objStack;
     }
-    public Boolean writeObjectsStack(String pathFile, StackList<E> objects) {
+
+    public Boolean writeObjectsStack(String pathFile, Pila<E> objects) {
         boolean successful = false;
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
@@ -99,8 +114,8 @@ public class FileJsonAdapter<E> {
         return successful;
     }
 
-    public QueueList<E> getObjectsQueue(String pathFile, Class<E[]> classOfT) {
-        QueueList<E> objQueue = new QueueList<>();
+    public Cola<E> getObjectsQueue(String pathFile, Class<E[]> classOfT) {
+        Cola<E> objQueue = new Cola<>();
         try {
             Gson gson = new GsonBuilder().create();
             BufferedReader bufferedReader = new BufferedReader(new FileReader(pathFile));
@@ -116,7 +131,7 @@ public class FileJsonAdapter<E> {
         return objQueue;
     }
 
-    public Boolean writeObjectsQueue(String pathFile, QueueList<E> objects) {
+    public Boolean writeObjectsQueue(String pathFile, Cola<E> objects) {
         boolean successful = false;
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 

@@ -1,14 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="juli.vitalco.RegistroPacienteView"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="juli.vitalco.controller.RegistroPacienteViewController">
+   <children>
+      <AnchorPane prefHeight="163.0" prefWidth="1280.0" style="-fx-background-color: #F3549EFF;">
+         <children>
+            <Text layoutX="433.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRO PACIENTE">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Button fx:id="registrar" layoutX="970.0" layoutY="422.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="138.0" style="-fx-background-color: #07A5CCFF;" text="REGISTRAR" onAction="#registrar" />
+      <Text layoutX="200.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Documento">
+         <font>
+            <Font name="KacstDecorative" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="documento" layoutX="200.0" layoutY="309.0" prefHeight="33.0" prefWidth="268.0" promptText="Ingrese su documento" />
+      <Text layoutX="200.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
+         <font>
+            <Font name="KacstDecorative" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nombre" layoutX="200.0" layoutY="432.0" prefHeight="33.0" prefWidth="268.0" promptText="Ingrese su Nombre" />
+      <Text layoutX="200.0" layoutY="534.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apeliido">
+         <font>
+            <Font name="KacstDecorative" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="apellido" layoutX="200.0" layoutY="551.0" prefHeight="33.0" prefWidth="268.0" promptText="Ingrese su Apellido" />
+      <Text layoutX="577.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edad">
+         <font>
+            <Font name="KacstDecorative" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="edad" layoutX="577.0" layoutY="308.0" prefHeight="33.0" prefWidth="268.0" promptText="Ingrese su Edad" />
+      <Text layoutX="577.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefono">
+         <font>
+            <Font name="KacstDecorative" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="telefono" layoutX="577.0" layoutY="431.0" prefHeight="33.0" prefWidth="268.0" promptText="Ingrese su Telefono" />
+      <Text layoutX="577.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo">
+         <font>
+            <Font name="KacstDecorative" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="correo" layoutX="577.0" layoutY="550.0" prefHeight="33.0" prefWidth="268.0" promptText="Ingrese su Correo" />
+      <Text layoutX="387.0" layoutY="650.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña">
+         <font>
+            <Font name="KacstDecorative" size="18.0" />
+         </font>
+      </Text>
+      <PasswordField fx:id="contraseña" layoutX="387.0" layoutY="673.0" prefHeight="33.0" prefWidth="268.0" promptText="Digite sue nueva contraseña" />
+   </children>
 </AnchorPane>

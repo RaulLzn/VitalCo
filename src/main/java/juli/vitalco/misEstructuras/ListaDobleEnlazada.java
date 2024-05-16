@@ -1,4 +1,4 @@
-package juli.misEstructuras;
+package juli.vitalco.misEstructuras;
 
 public class ListaDobleEnlazada<T> extends ListaDobleEnlazadaAbstracta<T> {
 	

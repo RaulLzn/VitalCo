@@ -26,7 +26,10 @@ public class Pila<T> {
         }
         T valor = cabeza.getValor();
         cabeza = cabeza.siguiente;
-        return valor;
+        if (cabeza == null) {
+            System.out.println("Se ha extraído el último elemento de la pila.");
+        }
+        return valor   ;
     }
 
     // Método que muestra el último elemento agregado a la pila
@@ -41,7 +44,39 @@ public class Pila<T> {
     public boolean estaVacia() {
         return cabeza == null;
     }
-    
+
+    public T[] toArray() {
+        int size = size(); // Calcular el tamaño de la pila
+        T[] array = (T[]) new Object[size]; // Crear un arreglo del tamaño de la pila
+        Nodo<T> temp = cabeza; // Nodo temporal para recorrer la pila
+        int index = 0;
+
+        // Recorrer la pila y agregar los elementos al arreglo
+        while (temp != null) {
+            array[index++] = temp.getValor();
+            temp = temp.getSiguiente();
+        }
+
+        return array;
+    }
+
+    public int size() {
+        int size = 0;
+        Nodo<T> temp = cabeza;
+        while (temp != null) {
+            size++;
+            temp = temp.getSiguiente();
+        }
+        return size;
+    }
+
+    //metodo addAll
+    public void addAll(Pila<T> pila) {
+        while (!pila.estaVacia()) {
+            push(pila.pop());
+        }
+    }
+
     private static class Nodo<T> {
         T valor;
         Nodo<T> siguiente;

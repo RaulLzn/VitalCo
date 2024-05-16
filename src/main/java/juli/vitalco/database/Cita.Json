@@ -1,0 +1,84 @@
+[
+  {
+    "idCita": "CE660",
+    "tipoCita": "CitaExamen",
+    "idPaciente": "123",
+    "especialidad": "CARDIOLOGIA",
+    "idMedico": "456",
+    "motivoCita": "EXAMEN",
+    "costo": "50",
+    "atendida": false
+  },
+  {
+    "idCita": "MC116",
+    "tipoCita": "CitaNormal",
+    "idPaciente": "123",
+    "especialidad": "MEDICINA_GENERAL",
+    "idMedico": "456",
+    "motivoCita": "CONTROL",
+    "costo": "0",
+    "atendida": false,
+    "idAutExamen": "789"
+  },
+  {
+    "idCita": "CV910",
+    "tipoCita": "CitaExamen",
+    "idPaciente": "1",
+    "especialidad": "CARDIOLOGIA",
+    "idMedico": "Juan",
+    "motivoCita": "VALORACION",
+    "costo": "50",
+    "atendida": false
+  },
+  {
+    "idCita": "CV837",
+    "tipoCita": "CitaExamen",
+    "idPaciente": "1",
+    "especialidad": "CARDIOLOGIA",
+    "idMedico": "Juan",
+    "motivoCita": "VALORACION",
+    "costo": "50",
+    "atendida": false
+  },
+  {
+    "idCita": "CV943",
+    "tipoCita": "CitaExamen",
+    "idPaciente": "1",
+    "especialidad": "CARDIOLOGIA",
+    "idMedico": "Juan",
+    "motivoCita": "VALORACION",
+    "costo": "50",
+    "atendida": false
+  },
+  {
+    "idCita": "CV966",
+    "tipoCita": "CitaExamen",
+    "idPaciente": "1",
+    "especialidad": "CARDIOLOGIA",
+    "idMedico": "Juan",
+    "motivoCita": "VALORACION",
+    "costo": "50",
+    "atendida": false
+  },
+  {
+    "idCita": "MC821",
+    "tipoCita": "CitaNormal",
+    "idPaciente": "1",
+    "especialidad": "MEDICINA_GENERAL",
+    "idMedico": "Jose",
+    "motivoCita": "CONTROL",
+    "costo": "0",
+    "atendida": false
+  },
+  {
+    "idCita": "MC773",
+    "tipoCita": "CitaNormal",
+    "idPaciente": "1",
+    "especialidad": "MEDICINA_GENERAL",
+    "idMedico": "Jose",
+    "motivoCita": "CONTROL",
+    "costo": "0",
+    "atendida": false,
+    "idAutExamen": "Endoscopia digestiva"
+  }
+]

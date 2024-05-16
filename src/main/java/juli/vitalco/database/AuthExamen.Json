@@ -1,0 +1,50 @@
+[
+  {
+    "idAuthExamen": "1",
+    "idPaciente": "1",
+    "examen": "BIOPSIA_PIEL",
+    "estado": "POR_AUTORIZAR",
+    "descripcion": "Biopsia de piel (escisión)"
+  },
+  {
+    "idAuthExamen": "3",
+    "idPaciente": "3",
+    "estado": "POR_AUTORIZAR",
+    "descripcion": "Electrocardiograma para adultos"
+  },
+  {
+    "idAuthExamen": "AE12345",
+    "idPaciente": "P12345",
+    "examen": "ECOGRAFIA",
+    "estado": "POR_AUTORIZAR",
+    "descripcion": "Ecografía cardíaca (transtorácica)"
+  },
+  {
+    "idAuthExamen": "Q795",
+    "idPaciente": "1",
+    "examen": "ENDOSCOPIA",
+    "estado": "POR_AUTORIZAR",
+    "descripcion": "Endoscopia digestiva"
+  },
+  {
+    "idAuthExamen": "J092",
+    "idPaciente": "1",
+    "examen": "COLONOSCOPIA",
+    "estado": "POR_AUTORIZAR",
+    "descripcion": "Colonoscopia total"
+  },
+  {
+    "idAuthExamen": "J284",
+    "idPaciente": "1",
+    "examen": "PRUEBA_DE_ALERGIA",
+    "estado": "AUTORIZADO",
+    "descripcion": "Prueba de alergia en niños"
+  },
+  {
+    "idAuthExamen": "Y020",
+    "idPaciente": "1",
+    "examen": "BIOPSIA_PIEL",
+    "estado": "POR_AUTORIZAR",
+    "descripcion": "Biopsia de piel (escisión)"
+  }
+]

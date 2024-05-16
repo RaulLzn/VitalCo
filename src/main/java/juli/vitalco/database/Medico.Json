@@ -1,0 +1,27 @@
+[
+  {
+    "nombre": "Juan",
+    "especialidad": "CARDIOLOGIA",
+    "ideMedico": "1"
+  },
+  {
+    "nombre": "Pedro",
+    "especialidad": "DERMATOLOGIA",
+    "ideMedico": "2"
+  },
+  {
+    "nombre": "Maria",
+    "especialidad": "GASTROENTEROLOGIA",
+    "ideMedico": "3"
+  },
+  {
+    "nombre": "Jose",
+    "especialidad": "MEDICINA_GENERAL",
+    "ideMedico": "4"
+  },
+  {
+    "nombre": "Luis",
+    "especialidad": "PEDIATRIA",
+    "ideMedico": "5"
+  }
+]

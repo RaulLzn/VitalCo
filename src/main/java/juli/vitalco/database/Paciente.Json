@@ -1,0 +1,58 @@
+[
+  {
+    "idpaciente": "1",
+    "nombre": "Juan",
+    "apellido": "García",
+    "edad": "30",
+    "telefono": "123456789",
+    "correo": "juan@example.com"
+  },
+  {
+    "idpaciente": "2",
+    "nombre": "María",
+    "apellido": "López",
+    "edad": "25",
+    "telefono": "987654321",
+    "correo": "maria@example.com"
+  },
+  {
+    "idpaciente": "1",
+    "nombre": "Juan",
+    "apellido": "García",
+    "edad": "30",
+    "telefono": "123456789",
+    "correo": "juan@example.com"
+  },
+  {
+    "idpaciente": "2",
+    "nombre": "María",
+    "apellido": "López",
+    "edad": "25",
+    "telefono": "987654321",
+    "correo": "maria@example.com"
+  },
+  {
+    "idpaciente": "1097491234",
+    "nombre": "Raul",
+    "apellido": "Lozano",
+    "edad": "21",
+    "telefono": "3207002968",
+    "correo": "r.l@gmail.com"
+  },
+  {
+    "idpaciente": ".",
+    "nombre": ".",
+    "apellido": ".",
+    "edad": ".",
+    "telefono": ".",
+    "correo": "."
+  },
+  {
+    "idpaciente": ".",
+    "nombre": ".",
+    "apellido": ".",
+    "edad": ".",
+    "telefono": ".",
+    "correo": "."
+  }
+]

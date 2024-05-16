@@ -5,7 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import juli.vitalco.controller.CancelarCitaView;
+import juli.vitalco.controller.CancelarCitaViewController;
 
 
 public class CancelarCitaApp extends Application {
@@ -18,7 +18,7 @@ public class CancelarCitaApp extends Application {
             AnchorPane root = (AnchorPane) loader.load();
 
             // Obtener el controlador y configurar la escena
-            CancelarCitaView controller = loader.getController();
+            CancelarCitaViewController controller = loader.getController();
             controller.initialize();
 
             Scene scene = new Scene(root, 1280, 800);

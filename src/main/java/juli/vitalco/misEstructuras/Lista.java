@@ -1,4 +1,4 @@
-package juli.misEstructuras;
+package juli.vitalco.misEstructuras;
 
 public interface Lista<T> {
     void agregarAlInicio(T valor);//Añade un nuevo elemento al inicio de la lista.Actualiza las referencias del nodo actual de la cabeza y del nuevo nodo.

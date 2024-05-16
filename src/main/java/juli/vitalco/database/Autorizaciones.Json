@@ -1,0 +1,9 @@
+[
+  {
+    "idAuthExamen": "X409",
+    "idPaciente": "1",
+    "examen": "ELECTRO",
+    "estado": "POR_AUTORIZAR",
+    "descripcion": "Electrocardiograma para adultos"
+  }
+]
